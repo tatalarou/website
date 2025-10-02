@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleex.ai - AI-Native OS for Delivery Companies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #f5f5ef;
+            color: #031f47;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background-color: #f5f5ef;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .company-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #031f47;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 100px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #031f47;
+        }
+
+        .hero h1 .highlight {
+            text-decoration: underline;
+            text-decoration-color: #031f47;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 8px;
+        }
+
+        .hero h1 .icon {
+            display: inline-block;
+            height: 0.85em;
+            width: auto;
+            margin: 0 0.15em;
+            vertical-align: -0.05em;
+        }
+
+        .hero .tagline {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #031f47;
+            margin-top: 40px;
+            font-style: italic;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #031f47;
+            color: #f5f5ef;
+            padding: 80px 0;
+            position: relative;
+            overflow: visible;
+            z-index: 5;
+        }
+
+        .moving-car {
+            position: absolute;
+            top: -45px;
+            height: 45px;
+            width: auto;
+            animation: driveCar 12s linear infinite;
+            z-index: 100;
+        }
+
+        @keyframes driveCar {
+            0% {
+                left: -80px;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 600;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 600;
+        }
+
+        .workflow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .workflow-item {
+            flex: 1;
+            min-width: 250px;
+            padding: 40px 30px;
+            background-color: #031f47;
+            color: #f5f5ef;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .workflow-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .workflow-item h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Value Proposition */
+        .value-prop {
+            background-color: #031f47;
+            color: #f5f5ef;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .value-prop h2 {
+            font-size: 2.8rem;
+            line-height: 1.4;
+            font-weight: 500;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .value-prop h2 .emphasis {
+            font-weight: 700;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background-color: #031f47;
+            color: #f5f5ef;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(3, 31, 71, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #031f47;
+            color: #f5f5ef;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer img {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.4rem;
+            }
+
+            .features h2,
+            .how-it-works h2,
+            .cta h2 {
+                font-size: 2rem;
+            }
+
+            .value-prop h2 {
+                font-size: 2rem;
+            }
+
+            .workflow-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="fleex-ai-logo.png" alt="Fleex.ai" class="logo">
+                <span class="company-name">Fleex.ai</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>
+                The AI-native OS for small<br>
+                <span class="highlight">delivery companies</span> to run<img src="computer.JPG" alt="" class="icon">,<br>
+                dispatch<img src="car.JPG" alt="" class="icon">, and scale<img src="scale.JPG" alt="" class="icon">.
+            </h1>
+            <p class="tagline">Your Fleet. On Autopilot.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <img src="moving-car.JPG" alt="" class="moving-car">
+        <div class="container">
+            <h2>Everything You Need, All in One Place</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Dispatching</h3>
+                    <p>Intelligent routing and real-time dispatch management powered by AI</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Financing</h3>
+                    <p>Integrated financial tools to manage cash flow and grow your business</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Maintenance</h3>
+                    <p>Proactive vehicle maintenance to minimize downtime and unexpected costs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Driver Management</h3>
+                    <p>Streamlined driver scheduling, performance tracking, and communication</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>KPIs & Insights</h3>
+                    <p>Real-time analytics and actionable insights to optimize operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How Does It Work?</h2>
+            <div class="workflow-container">
+                <div class="workflow-item">
+                    <h3>💬 Make any queries</h3>
+                    <p>Talk to your fleet in natural language</p>
+                </div>
+                <div class="workflow-item">
+                    <h3>🤖 Agent Automated Workflows</h3>
+                    <p>AI agents handle routine tasks automatically</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="value-prop">
+        <div class="container">
+            <h2>
+                Less time <span class="emphasis">firefighting operations.</span><br>
+                More time <span class="emphasis">growing your business.</span>
+            </h2>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Fleet?</h2>
+            <p>Join the future of delivery operations management.</p>
+            <a href="mailto:taha.laroussi@fleex.ai?subject=Fleex.ai%20Inquiry" class="cta-button">Contact Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Fleex.ai. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
