@@ -271,26 +271,47 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                padding: 40px 0 60px;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+
+            .hero h1 br {
+                display: none;
+            }
+
+            .hero h1 .icon {
+                height: 0.75em;
+                margin: 0 0.1em;
             }
 
             .hero .tagline {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
+                margin-top: 30px;
             }
 
             .features h2,
             .how-it-works h2,
             .cta h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .value-prop h2 {
-                font-size: 2rem;
+                font-size: 1.6rem;
+                padding: 0 20px;
             }
 
             .workflow-container {
                 flex-direction: column;
+            }
+
+            .moving-car {
+                height: 35px;
+                top: -35px;
             }
         }
     </style>
@@ -309,8 +330,8 @@
         <div class="container">
             <h1>
                 The AI-native OS for small<br>
-                <span class="highlight">delivery companies</span> to run<img src="computer.JPG" alt="" class="icon">,<br>
-                dispatch<img src="car.JPG" alt="" class="icon">, and scale<img src="scale.JPG" alt="" class="icon">.
+                <span class="highlight">delivery companies</span> to <span style="white-space: nowrap;">run<img src="computer.JPG" alt="" class="icon">,</span><br>
+                <span style="white-space: nowrap;">dispatch<img src="car.JPG" alt="" class="icon">,</span> and <span style="white-space: nowrap;">scale<img src="scale.JPG" alt="" class="icon">.</span>
             </h1>
             <p class="tagline">Your Fleet. On Autopilot.</p>
         </div>
