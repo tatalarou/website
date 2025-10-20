@@ -90,13 +90,63 @@
         }
 
         /* Features Section */
-        .features {
+        /* Problem Section */
+        .problem {
             background-color: #031f47;
             color: #f5f5ef;
             padding: 80px 0;
+            text-align: center;
             position: relative;
             overflow: visible;
             z-index: 5;
+        }
+
+        .problem h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .problem-subtitle {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 60px;
+            opacity: 0.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .problem-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .problem-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .problem-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .features {
+            background-color: #f5f5ef;
+            color: #031f47;
+            padding: 80px 0;
         }
 
         .moving-car {
@@ -358,6 +408,24 @@
             line-height: 1.6;
         }
 
+        .member-linkedin {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0077b5;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .member-linkedin:hover {
+            background-color: #005885;
+            transform: translateY(-2px);
+        }
+
         .team-logos {
             display: flex;
             justify-content: center;
@@ -411,9 +479,20 @@
 
         .pricing-description {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             opacity: 0.9;
             color: #f5f5ef;
+        }
+
+        .pricing-stage {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            padding: 15px 25px;
+            background-color: rgba(245, 245, 239, 0.1);
+            border-left: 3px solid #f5f5ef;
+            font-style: italic;
+            color: #f5f5ef;
+            opacity: 0.9;
         }
 
         .pricing-button {
@@ -605,6 +684,18 @@
                 flex-direction: column;
             }
 
+            .problem h2 {
+                font-size: 2rem;
+            }
+
+            .problem-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
             .moving-car {
                 height: 35px;
                 top: -35px;
@@ -696,8 +787,38 @@
         </div>
     </section>
 
-    <section class="features">
+    <section class="problem">
         <img src="assets/moving-car.JPG" alt="" class="moving-car">
+        <div class="container">
+            <h2>Fleet Operations Are Broken...</h2>
+            <p class="problem-subtitle">A maze of inefficiencies is costing delivery businesses time and money.</p>
+            
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <div class="problem-icon">📋</div>
+                    <div class="problem-text">No centralized tools for management</div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">⏱️</div>
+                    <div class="problem-text">Manual processes relying on paper/excel</div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🔄</div>
+                    <div class="problem-text">Constant back-and-forth with drivers</div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🗺️</div>
+                    <div class="problem-text">No intelligent route planning</div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">⚙️</div>
+                    <div class="problem-text">Unreliable vehicle maintenance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
         <div class="container">
             <h2>Everything You Need, All in One Place</h2>
             <div class="features-grid">
@@ -730,6 +851,15 @@
         </div>
     </section>
 
+    <section class="value-prop">
+        <div class="container">
+            <h2>
+                Less time <span class="emphasis">firefighting operations.</span><br>
+                More time <span class="emphasis">growing your business.</span>
+            </h2>
+        </div>
+    </section>
+
     <section class="how-it-works">
         <div class="container">
             <h2>How Does It Work?</h2>
@@ -746,15 +876,6 @@
         </div>
     </section>
 
-    <section class="value-prop">
-        <div class="container">
-            <h2>
-                Less time <span class="emphasis">firefighting operations.</span><br>
-                More time <span class="emphasis">growing your business.</span>
-            </h2>
-        </div>
-    </section>
-
     <section class="team">
         <div class="container">
             <h2>Our Team</h2>
@@ -765,6 +886,7 @@
                     <p class="member-title">PhD, École Polytechnique</p>
                     <p class="member-title">Mechanical Engineer, EPFL</p>
                     <p class="member-description">→ Experience in physical modeling and complex systems</p>
+                    <a href="https://www.linkedin.com/in/taha-laroussi/" target="_blank" rel="noopener" class="member-linkedin">View LinkedIn Profile</a>
                 </div>
                 <div class="team-member">
                     <img src="assets/nico.png" alt="Nicolas Lefebure" class="member-photo">
@@ -773,6 +895,7 @@
                     <p class="member-title">Ex-Venture Analyst, Elaia</p>
                     <p class="member-title">Mechanical Engineer, EPFL</p>
                     <p class="member-description">→ Predictive modelling on real-time data</p>
+                    <a href="https://www.linkedin.com/in/nicolas-lefebure-358a63151" target="_blank" rel="noopener" class="member-linkedin">View LinkedIn Profile</a>
                 </div>
             </div>
             <div class="team-logos">
@@ -788,6 +911,9 @@
             <h2>Pricing On Demand</h2>
             <div class="pricing-content">
                 <p class="pricing-description">We offer customized pricing tailored to your fleet size and specific needs. Contact us to discuss the perfect solution for your business.</p>
+                <div class="pricing-stage">
+                    <strong>Product Status:</strong> Currently in active development with early access available for pilot partners. We're working closely with delivery companies to build the exact solution you need.
+                </div>
                 <a href="mailto:nicolas.lefebure@fleex.ai?subject=Fleex.ai%20Pricing%20Inquiry" class="pricing-button">Get a Quote</a>
             </div>
         </div>
